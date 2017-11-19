@@ -53,14 +53,16 @@ def dot(v1, v2):
 
 
 def magnitude(v1):
+    return np.linalg.norm(v1)
     # print("norm or magnitude:",np.linalg.norm(v1))
-    return round(math.sqrt(math.pow(v1[0],2)+math.pow(v1[1],2)),2)
+    #return round(math.sqrt(math.pow(v1[0],2)+math.pow(v1[1],2)),2)
     
     
 
 def unitVector(v):
+    return [(x / magnitude(v)) for x in v]
     # print(np.array([1,2])/magnitude(v))
-    return ([round((x / magnitude(v)),2) for x in v])
+    #return ([round((x / magnitude(v)),2) for x in v])
 
 # Sample Vectors
 a = [1, 2]
@@ -70,5 +72,7 @@ print("Addition: ", add(a, b))
 print("Subtraction: ", sub(a, b))
 print("Dot: ", dot(a, b))
 
-print("Magnitude: ",magnitude(a))
-print("Unit of ",a ," is",unitVector(a))
+# for n V
+c= [1,2,3,3,44,4,]
+print("Magnitude of: ",c," is ",magnitude(c))
+print("Unit of ",c ," is\n",unitVector([1,2,3,3,44,4,]))
