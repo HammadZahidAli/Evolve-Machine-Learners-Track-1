@@ -102,6 +102,7 @@ h2=[22.737,23.64]
 b1=[-1,-1]
 b2=[1,1]
 Orthogonal(a1,a2)
+Orthogonal([0,0],[0,0])
 parallel(h1,h2)
 print(dot(m,g))
 print(angle_between(p,k))
